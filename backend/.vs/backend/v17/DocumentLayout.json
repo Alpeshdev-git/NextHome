@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Pg-renting-System\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|d:\\pg-renting-system\\backend\\auth-service\\controllers\\nexthomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|solutionrelative:auth-service\\controllers\\nexthomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|d:\\pg-renting-system\\backend\\auth-service\\models\\pgproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|solutionrelative:auth-service\\models\\pgproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|d:\\pg-renting-system\\backend\\auth-service\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|solutionrelative:auth-service\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|d:\\pg-renting-system\\backend\\auth-service\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|solutionrelative:auth-service\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|d:\\pg-renting-system\\backend\\auth-service\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|solutionrelative:auth-service\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|d:\\pg-renting-system\\backend\\auth-service\\models\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|solutionrelative:auth-service\\models\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|d:\\pg-renting-system\\backend\\auth-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C7B1938-10BF-4ACE-B79F-21FADEA92204}|Auth-Service\\Auth-Service.csproj|solutionrelative:auth-service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PgProperty.cs",
+              "DocumentMoniker": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\PgProperty.cs",
+              "RelativeDocumentMoniker": "Auth-Service\\models\\PgProperty.cs",
+              "ToolTip": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\PgProperty.cs",
+              "RelativeToolTip": "Auth-Service\\models\\PgProperty.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T12:19:50.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\Role.cs",
+              "RelativeDocumentMoniker": "Auth-Service\\models\\Role.cs",
+              "ToolTip": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\Role.cs",
+              "RelativeToolTip": "Auth-Service\\models\\Role.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T11:09:00.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\Booking.cs",
+              "RelativeDocumentMoniker": "Auth-Service\\models\\Booking.cs",
+              "ToolTip": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\Booking.cs",
+              "RelativeToolTip": "Auth-Service\\models\\Booking.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T11:08:54.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "State.cs",
+              "DocumentMoniker": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\State.cs",
+              "RelativeDocumentMoniker": "Auth-Service\\models\\State.cs",
+              "ToolTip": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\State.cs",
+              "RelativeToolTip": "Auth-Service\\models\\State.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T11:08:39.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\User.cs",
+              "RelativeDocumentMoniker": "Auth-Service\\models\\User.cs",
+              "ToolTip": "D:\\Pg-renting-System\\backend\\Auth-Service\\models\\User.cs",
+              "RelativeToolTip": "Auth-Service\\models\\User.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T10:36:36.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NexthomeController.cs",
+              "DocumentMoniker": "D:\\Pg-renting-System\\backend\\Auth-Service\\Controllers\\NexthomeController.cs",
+              "RelativeDocumentMoniker": "Auth-Service\\Controllers\\NexthomeController.cs",
+              "ToolTip": "D:\\Pg-renting-System\\backend\\Auth-Service\\Controllers\\NexthomeController.cs",
+              "RelativeToolTip": "Auth-Service\\Controllers\\NexthomeController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAUwFAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T09:34:14.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Pg-renting-System\\backend\\Auth-Service\\Program.cs",
+              "RelativeDocumentMoniker": "Auth-Service\\Program.cs",
+              "ToolTip": "D:\\Pg-renting-System\\backend\\Auth-Service\\Program.cs",
+              "RelativeToolTip": "Auth-Service\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T08:54:17.198Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

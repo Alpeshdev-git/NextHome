@@ -1,0 +1,19 @@
+# Node
+node_modules/
+
+# Env files
+.env
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.log
+
+# Build / Dist
+build/
+dist/
+
+# Visual Studio / .NET
+.vs/
+bin/
+obj/
