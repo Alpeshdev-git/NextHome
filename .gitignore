@@ -12,3 +12,8 @@ node_modules/
 # Build / Dist
 build/
 dist/
+
+# Visual Studio / .NET
+.vs/
+bin/
+obj/
