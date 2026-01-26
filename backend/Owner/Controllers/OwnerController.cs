@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Owner.models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Owner.Controllers
 {
@@ -8,10 +9,29 @@ namespace Owner.Controllers
     [ApiController]
     public class OwnerController : ControllerBase
     {
-        [HttpPost("AddUpdate")]
-        public string addUpdate(PgProperty pg)
+        [HttpPost("addpgproperty")]
+        public string postPgProperty([FromBody] Pg_PropertyDTO pg)
         {
-
+            if (pg == null)
+            {
+                return "Invalid property Data";
+            }
+            var db = new NexthomeContext();
+            var entity = new PgProperty
+            {
+                OwnerId = pg.OwnerId,
+                PgName = pg.PgName,
+                Description = pg.Description,
+                AreaId = pg.AreaId,
+                Type = pg.Type,
+                Rent = pg.Rent,
+                Facility = pg.Facility,
+                Status = pg.Status
+            };
+            db.PgProperties.Add(entity);
+            db.SaveChanges();
+            return "Save Successfully";
         }
     }
+   
 }
