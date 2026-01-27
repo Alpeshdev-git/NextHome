@@ -104,6 +104,104 @@ namespace Owner.Controllers
             });
         }
 
+        [HttpGet("getcomplaints")]
+        public IActionResult GetComplaint(int pgId)
+        {
+            var db = new NexthomeContext();
+
+            var complaints = db.Complaints
+                               .Where(c => c.PgId == pgId)
+                               .Select(c => new ComplaintDTO
+                               {
+                                   ComplaintId = c.ComplaintId,
+                                   TenantId = c.TenantId,
+                                   PgId = c.PgId,
+                                   Message = c.Message,
+                                   Status = c.Status,
+                                   ComplaintAt = c.ComplaintAt
+                               })
+                               .ToList();
+
+            if (!complaints.Any())
+                return NotFound("No complaints found for this PG.");
+
+            return Ok(complaints);
+        }
+        [HttpGet("getfeedback")]
+        public ActionResult GetFeedback(int pgId)
+        {
+            using var db = new NexthomeContext();
+
+            var feedbackList = db.Feedbacks
+                                 .Where(f => f.PgId == pgId)
+                                 .Select(f => new FeedBackDTO
+                                 {
+                                     FeedbackId = f.FeedbackId,
+                                     TenantId = f.TenantId,
+                                     PgId = f.PgId,
+                                     Rating = f.Rating,
+                                     Comment = f.Comment
+                                 })
+                                 .ToList();
+
+            if (feedbackList.Count == 0)
+            {
+                return Ok("No feedback found for this PG."); 
+            }
+
+            return Ok(feedbackList); 
+        }
+
+        [HttpGet("owner/bookings/pending")]
+        public ActionResult GetPendingBookings(int ownerId)
+        {
+            using var db = new NexthomeContext();
+
+            var pendingBookings = db.Bookings
+                 .Join(db.Rooms, b => b.RoomId, r => r.RoomId, (b, r) => new { b, r })
+                 .Join(db.PgProperties, br => br.r.PgId, pg => pg.PgId, (br, pg) => new { br.b, br.r, pg })
+                 .Where(x => x.pg.OwnerId == ownerId && x.b.BookingStatus == "Pending")
+                 .Select(x => new OwnerBookingDTO
+                 {
+                     BookingId = x.b.BookingId,
+                     TenantId = x.b.TenantId,
+                     RoomId = x.b.RoomId,
+                     BookDate = x.b.BookDate,
+                     StartDate = x.b.StartDate,
+                     EndDate = x.b.EndDate,
+                     BookingStatus = x.b.BookingStatus
+                 })
+                 .ToList();
+
+
+            if (!pendingBookings.Any())
+                return Ok("No pending booking requests.");
+
+            return Ok(pendingBookings);
+        }
+
+
+        [HttpPut("owner/bookings/{bookingId}/update-status")]
+        public ActionResult UpdateBookingStatus(int bookingId, [FromBody] BookingStatusUpdateDTO dto, int ownerId)
+        {
+            using var db = new NexthomeContext();
+            var booking = db.Bookings
+                .Join(db.Rooms, b => b.RoomId, r => r.RoomId, (b, r) => new { b, r })
+                .Join(db.PgProperties, br => br.r.PgId, pg => pg.PgId, (br, pg) => new { br.b, br.r, pg })
+                .FirstOrDefault(x => x.b.BookingId == bookingId && x.pg.OwnerId == ownerId);
+
+            if (booking == null)
+                return NotFound("Booking not found or you do not have permission.");
+            if (dto.NewStatus != "Approved" && dto.NewStatus != "Rejected")
+                return BadRequest("Invalid status.");
+            booking.b.BookingStatus = dto.NewStatus;
+
+            db.SaveChanges();
+
+            return Ok($"Booking {bookingId} has been {dto.NewStatus}.");
+        }
+
+
     }
 
 }
