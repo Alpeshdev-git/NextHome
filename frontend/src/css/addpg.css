@@ -1,0 +1,168 @@
+/* ================= Container ================= */
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= Card ================= */
+.register-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  padding: 45px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.register-card h2 {
+  margin-bottom: 35px;
+  color: #333;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* ================= Form Rows ================= */
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.form-row > * {
+  flex: 1 1 48%;
+  position: relative;
+}
+
+/* ================= Form Field ================= */
+.form-field {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 16px 16px 16px 16px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-field textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 10px rgba(106,17,203,0.3);
+  background: #fff;
+}
+
+/* ================= Floating Labels ================= */
+.form-field label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.form-field input:focus + label,
+.form-field input:not(:placeholder-shown) + label,
+.form-field select:focus + label,
+.form-field select:not([value='']) + label,
+.form-field textarea:focus + label,
+.form-field textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #6a11cb;
+  font-weight: 600;
+}
+
+/* ================= Button ================= */
+.register-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button:hover {
+  background: linear-gradient(90deg, #2575fc, #6a11cb);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ================= Error ================= */
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+input.error-input,
+select.error-input,
+textarea.error-input {
+  border: 1px solid red;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 30px 25px;
+  }
+  
+  .register-card h2 {
+    font-size: 24px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .register-button {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
