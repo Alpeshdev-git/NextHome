@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../css/TenantDashBoard.css";
+import "../../css/TenantDashboard.css";
 
 const PG_LIST = [
   {
@@ -22,10 +22,40 @@ const PG_LIST = [
     rating: 4.2,
     image: "https://images.unsplash.com/photo-1502673530728-f79b4cab31b1",
   },
-  // (keep rest of your PGs as-is)
+  {
+    id: 3,
+    name: "Skyline PG",
+    location: "Hyderabad",
+    sharing: "1, 2 Sharing",
+    rent: "₹10,000",
+    owner: "Vikram Singh",
+    rating: 4.6,
+    image: "https://images.unsplash.com/photo-1560185008-5c1f6d4f6b90",
+  },
+  {
+    id: 4,
+    name: "Urban Nest PG",
+    location: "Mumbai",
+    sharing: "2, 3 Sharing",
+    rent: "₹11,000",
+    owner: "Amit Patel",
+    rating: 4.1,
+    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+  },
+  {
+    id: 5,
+    name: "Blue Moon PG",
+    location: "Chennai",
+    sharing: "1 Sharing",
+    rent: "₹12,000",
+    owner: "Suresh Rao",
+    rating: 4.8,
+    image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+  },
+  // Add more PGs if needed
 ];
 
-export default function TenantDashBoard() {
+export default function TenantDashboard() {
   const [selectedPG, setSelectedPG] = useState(null);
   const [search, setSearch] = useState("");
   const [showNotif, setShowNotif] = useState(false);
@@ -75,11 +105,7 @@ export default function TenantDashBoard() {
       {/* PG CARDS */}
       <div className="card-container">
         {filteredPGs.map(pg => (
-          <div
-            key={pg.id}
-            className="pg-card"
-            onClick={() => setSelectedPG(pg)}
-          >
+          <div key={pg.id} className="pg-card" onClick={() => setSelectedPG(pg)}>
             <img src={pg.image} alt={pg.name} />
             <div className="pg-info">
               <h3>{pg.name}</h3>
@@ -106,9 +132,7 @@ export default function TenantDashBoard() {
               <button className="pay">Pay Now</button>
             </div>
 
-            <button className="close" onClick={() => setSelectedPG(null)}>
-              Close
-            </button>
+            <button className="close" onClick={() => setSelectedPG(null)}>Close</button>
           </div>
         </div>
       )}
