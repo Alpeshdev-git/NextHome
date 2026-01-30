@@ -11,7 +11,7 @@ public partial class City
 
     public int? Sid { get; set; }
 
-    public virtual ICollection<PgProperty> PgProperties { get; set; } = new List<PgProperty>();
+    public virtual ICollection<Area> Areas { get; set; } = new List<Area>();
 
     public virtual State? SidNavigation { get; set; }
 }

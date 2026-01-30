@@ -8,21 +8,24 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import OwnerDashboard from './components/ownerdashboard/OwnerDashBoard.jsx';
-import AddPgForm from './components/ownerdashboard/AddPg.jsx';
+import TenantDashboard from './components/tenantdashboard/TenantDashboard.jsx';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Main Layout Routes */}
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
         </Route>
-        <Route path="/owner/*" element={<OwnerDashboard />}>
-        <Route index element={<OwnerDashboard />} />
-        <Route path="add-pg" element={<AddPgForm ownerId={1} />} />
-      </Route>
+
+        {/* Owner Dashboard */}
+        <Route path="/owner/*" element={<OwnerDashboard />} />
+
+        {/* Tenant Dashboard */}
+        <Route path="/tenant" element={<TenantDashboard />} />
       </Routes>
     </BrowserRouter>
   );

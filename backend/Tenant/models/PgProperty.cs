@@ -13,8 +13,6 @@ public partial class PgProperty
 
     public string? Description { get; set; }
 
-    public int? Address { get; set; }
-
     public string? Type { get; set; }
 
     public int? Rent { get; set; }
@@ -23,7 +21,9 @@ public partial class PgProperty
 
     public string? Status { get; set; }
 
-    public virtual City? AddressNavigation { get; set; }
+    public int? AreaId { get; set; }
+
+    public virtual Area? Area { get; set; }
 
     public virtual ICollection<Complaint> Complaints { get; set; } = new List<Complaint>();
 

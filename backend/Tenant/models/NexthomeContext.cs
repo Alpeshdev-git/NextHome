@@ -16,6 +16,8 @@ public partial class NexthomeContext : DbContext
     {
     }
 
+    public virtual DbSet<Area> Areas { get; set; }
+
     public virtual DbSet<Booking> Bookings { get; set; }
 
     public virtual DbSet<City> Cities { get; set; }
@@ -45,6 +47,26 @@ public partial class NexthomeContext : DbContext
         modelBuilder
             .UseCollation("utf8mb4_0900_ai_ci")
             .HasCharSet("utf8mb4");
+
+        modelBuilder.Entity<Area>(entity =>
+        {
+            entity.HasKey(e => e.AreaId).HasName("PRIMARY");
+
+            entity.ToTable("area");
+
+            entity.HasIndex(e => e.CityId, "fk_cityId_city_idx");
+
+            entity.Property(e => e.AreaId).HasColumnName("area_id");
+            entity.Property(e => e.AreaName)
+                .HasMaxLength(100)
+                .HasColumnName("area_name");
+            entity.Property(e => e.CityId).HasColumnName("city_id");
+
+            entity.HasOne(d => d.City).WithMany(p => p.Areas)
+                .HasForeignKey(d => d.CityId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("fk_cityId_city");
+        });
 
         modelBuilder.Entity<Booking>(entity =>
         {
@@ -189,12 +211,12 @@ public partial class NexthomeContext : DbContext
 
             entity.ToTable("pg_property");
 
-            entity.HasIndex(e => e.Address, "fk_location_location_idx");
-
             entity.HasIndex(e => e.OwnerId, "fk_owner_user_idx");
 
+            entity.HasIndex(e => e.AreaId, "fk_pg_area");
+
             entity.Property(e => e.PgId).HasColumnName("pg_id");
-            entity.Property(e => e.Address).HasColumnName("address");
+            entity.Property(e => e.AreaId).HasColumnName("area_id");
             entity.Property(e => e.Description)
                 .HasMaxLength(100)
                 .HasColumnName("description");
@@ -213,9 +235,9 @@ public partial class NexthomeContext : DbContext
                 .HasMaxLength(45)
                 .HasColumnName("type");
 
-            entity.HasOne(d => d.AddressNavigation).WithMany(p => p.PgProperties)
-                .HasForeignKey(d => d.Address)
-                .HasConstraintName("fk_address_city");
+            entity.HasOne(d => d.Area).WithMany(p => p.PgProperties)
+                .HasForeignKey(d => d.AreaId)
+                .HasConstraintName("fk_pg_area");
 
             entity.HasOne(d => d.Owner).WithMany(p => p.PgProperties)
                 .HasForeignKey(d => d.OwnerId)
