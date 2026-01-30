@@ -22,7 +22,7 @@ export default function AddPgForm({ ownerId }) {
 
   // ================= Load States =================
   useEffect(() => {
-    fetch("http://localhost:5012/api/Owner/state")
+    fetch("https://localhost:7168/api/Owner/state")
       .then(res => res.json())
       .then(data => setStates(data))
       .catch(err => console.error("States API error:", err));
@@ -39,7 +39,7 @@ export default function AddPgForm({ ownerId }) {
     setAreas([]);
     setForm(prev => ({ ...prev, cityId: "", areaId: "" }));
 
-    fetch(`http://localhost:5012/api/Owner/cities?stateId=${form.stateId}`)
+    fetch(`https://localhost:7168/api/Owner/cities?stateId=${form.stateId}`)
       .then(res => res.json())
       .then(data => setCities(data))
       .catch(err => console.error("Cities API error:", err));
@@ -54,7 +54,7 @@ export default function AddPgForm({ ownerId }) {
 
     setAreas([]);
 
-    fetch(`http://localhost:5012/api/Owner/areas?cityId=${form.cityId}`)
+    fetch(`https://localhost:7168/api/Owner/areas?cityId=${form.cityId}`)
       .then(res => res.json())
       .then(data => setAreas(data))
       .catch(err => console.error("Areas API error:", err));

@@ -8,7 +8,7 @@ const OwnerDashboard = ({ ownerId }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
 
-  // ✅ SAFE localStorage access
+  //  SAFE localStorage access
   useEffect(() => {
     try {
       const storedUser = localStorage.getItem("user");
@@ -42,7 +42,7 @@ const OwnerDashboard = ({ ownerId }) => {
         </div>
 
         <div className="nav-right">
-          {/* ✅ relative path */}
+          {/* relative path */}
           <Link to="add-pg"><button>Add PG</button></Link>
           <button className="logout" onClick={handleLogout}>Logout</button>
         </div>
@@ -51,10 +51,10 @@ const OwnerDashboard = ({ ownerId }) => {
       {/* Main Content */}
       <div className="content">
         <Routes>
-          {/* ✅ Add PG */}
+          {/* Add PG */}
           <Route path="add-pg" element={<AddPgForm ownerId={ownerId} />} />
 
-          {/* ✅ Default dashboard */}
+          {/*Default dashboard */}
           <Route
             index
             element={

@@ -22,7 +22,7 @@ function App() {
         </Route>
 
         {/* Owner Dashboard */}
-        <Route path="/owner" element={<OwnerDashboard />} />
+        <Route path="/owner/*" element={<OwnerDashboard />} />
 
         {/* Tenant Dashboard */}
         <Route path="/tenant" element={<TenantDashboard />} />
