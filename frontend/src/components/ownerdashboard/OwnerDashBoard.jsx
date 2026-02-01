@@ -32,13 +32,13 @@ const OwnerDashboard = ({ ownerId }) => {
   return (
     <div className="dashboard-container">
       {/* Navbar */}
-      <nav className="navbar">
-        <div className="nav-left">
-          <h2 className="logo">NextHome</h2>
+      <nav className="owner-navbar">
+        <div className="owner-nav-left">
+          <h2 className="owner-logo">NextHome</h2>
         </div>
 
-        <div className="nav-center">
-          Hi, {user?.name || "Owner"}
+        <div className="owner-nav-center">
+          Welcome to NextHome Mr.{user?.name || "Owner"}
         </div>
 
         <div className="nav-right">
@@ -49,7 +49,7 @@ const OwnerDashboard = ({ ownerId }) => {
       </nav>
 
       {/* Main Content */}
-      <div className="content">
+      <div className="owner-content">
         <Routes>
           {/* Add PG */}
           <Route path="add-pg" element={<AddPgForm ownerId={ownerId} />} />
