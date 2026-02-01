@@ -11,11 +11,9 @@ public partial class Booking
 
     public int? RoomId { get; set; }
 
-    public DateOnly? BookDate { get; set; }
-
-    public DateOnly? StartDate { get; set; }
-
-    public DateOnly? EndDate { get; set; }
+    public DateTime? BookDate { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
 
     public int? RentAmount { get; set; }
 
