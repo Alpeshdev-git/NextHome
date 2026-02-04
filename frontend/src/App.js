@@ -7,14 +7,21 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
+
+// Owner
 import OwnerDashboard from './components/ownerdashboard/OwnerDashBoard.jsx';
+
+// Tenant
 import TenantDashboard from './components/tenantdashboard/TenantDashboard.jsx';
-import AdminDashboard from './components/admindashboard/AdminDashboard.jsx';
 import Notifications from './components/tenantdashboard/Notification.jsx';
+
+// Admin
+import AdminDashboard from './components/admindashboard/AdminDashboard.jsx';
 import OwnerList from './components/admindashboard/OwnerListPage.jsx';
 import TenantList from './components/admindashboard/TenantListPage.jsx';
 import PendingOwners from './components/admindashboard/PendingOwnerpage.jsx';
 import PgList from './components/admindashboard/PgListPage.jsx';
+
 function App() {
   return (
     <BrowserRouter>
@@ -31,10 +38,15 @@ function App() {
         <Route path="/owner/*" element={<OwnerDashboard />} />
 
         {/* Tenant Dashboard */}
-        <Route path="/tenant/*" element={<TenantDashboard />} />
-        <Route path="/tenant/notifications/:tenantId" element={<Notifications />} />
+        <Route path="/tenant" element={<TenantDashboard />} />
 
-        {/* ✅ ADMIN ROUTES (THIS IS THE FIX) */}
+        {/* 🔔 Notifications – SEPARATE PAGE */}
+        <Route
+          path="/tenant/notifications/:tenantId"
+          element={<Notifications />}
+        />
+
+        {/* Admin */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/owners" element={<OwnerList />} />
         <Route path="/admin/tenants" element={<TenantList />} />
