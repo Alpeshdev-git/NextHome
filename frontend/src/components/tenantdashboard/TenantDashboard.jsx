@@ -8,7 +8,7 @@ export default function TenantDashboard() {
   const [search, setSearch] = useState("");
   const [showProfile, setShowProfile] = useState(false);
 
-  // 🔔 NEW: notification count
+  // NEW: notification count
   const [notificationCount, setNotificationCount] = useState(0);
 
   const navigate = useNavigate();
@@ -113,7 +113,7 @@ export default function TenantDashboard() {
         </div>
 
         <div className="tenant-nav-right">
-          {/* 🔔 Bell with auto-clear */}
+          {/* Bell with auto-clear */}
           <button
             style={{ position: "relative" }}
             onClick={() => {
@@ -122,7 +122,7 @@ export default function TenantDashboard() {
                 return;
               }
 
-              setNotificationCount(0); // 🔔 NEW: clear count
+              setNotificationCount(0); // NEW: clear count
               navigate(`/tenant/notifications/${tenantId}`);
             }}
           >
